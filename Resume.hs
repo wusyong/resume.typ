@@ -117,13 +117,6 @@ rcc4r = paragraph
   , en "A Rust impl. of toy C Compiler with only 4 Raw functions."
   ]
 
-honga :: Resume
-honga = paragraph
-  [ github "wusyong/honga" `datedSection` bold "Honga"
-  , cn "TODO"
-  , en "A 64-bit RISC-V emulator written in Rust that can run xv6, a simple Unix-like OS."
-  ]
-
 devTools :: Resume
 devTools = paragraph
   [ itemTeX "開發工具" "Development Tool"
@@ -175,17 +168,6 @@ rust = paragraph
   , en "contributed to Rust compiler and its tools from time to time."
   ] where arust = "\\href{https://github.com/rust-unofficial/awesome-rust} {Awesome Rust}"
 
-embedded :: Resume
-embedded = paragraph
-  [ itemTeX "嵌入式系統" "Ebedded Systems"
-  , cn "\\textbf{1 年}經驗，"
-  , en "\\textbf{1 year} of experience,"
-
-  , cn "TODO"
-  , en $ "familiar with several SoCs and Development boards."
-      ++ "Understand basic concepts of SPI, I2C, UART, etc."
-  ]
-
 mobileDev :: Resume
 mobileDev = paragraph
   [ itemTeX "行動應用開發" "Mobile Development"
@@ -201,7 +183,6 @@ skills = section "技能" "Skills" . pure $ itemize
   , database
   , rust
   , system
-  , noSimple embedded
   , noSimple mobileDev
   , devTools
   ]
@@ -242,7 +223,6 @@ resume = paragraph
     , noSimple smolpotat
     , noSimple book
     , noSimple rcc4r
-    , noSimple honga
     ]
 
   , skills

@@ -5,3 +5,8 @@ This resume is based on [this](https://github.com/billryan/resume) and [this](ht
 # Build
 
 To build this resume, install texlive-full and GHC toolchain first. And then execute `update.sh`
+
+# Download
+
+- [English simplified version (pdf)](https://raw.githubusercontent.com/wusyong/resume/master/resume.pdf)
+- [English complete version (pdf)](https://raw.githubusercontent.com/wusyong/resume/master/resume-elab.pdf)
