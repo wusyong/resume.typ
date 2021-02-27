@@ -13,6 +13,16 @@ basicInfo = paragraph
   , pure "}"
   ] where period = "\\textperiodcentered\\"
 
+brief :: Resume
+brief = section "TODO" "Brief"
+  [ paragraph
+    [ en $ "A software developer interested in system programing, exploring from operating systems to embedded systems. "
+        ++ "Specifically, the design and implementation of concurrency patterns, for data, threads, and more. "
+        ++ "Proficient in Rust and C, but comfortible with most general programming languages."
+    , cn "TODO"
+    ]
+  ]
+
 education :: Resume
 education = section "學歷" "Education"
   [ datedSection (date "2012" "08" ~~ date "2016" "07") $ paragraph
@@ -117,6 +127,13 @@ rcc4r = paragraph
   , en "A Rust impl. of toy C Compiler with only 4 Raw functions."
   ]
 
+honga :: Resume
+honga = paragraph
+  [ github "wusyong/honga" `datedSection` bold "Honga"
+  , cn "TODO"
+  , en "A 64-bit RISC-V emulator that can run Unix-like OSes like xv6."
+  ]
+
 devTools :: Resume
 devTools = paragraph
   [ itemTeX "開發工具" "Development Tool"
@@ -155,7 +172,8 @@ system = paragraph
 
   , cn "TODO"
   , en $ "familiar with Linux programming interface and also other Unix-like OSes. "
-      ++ "Understand how to write an operating system from " ++ scratch ++ "."
+      ++ "Understand several concurrency patterns even on bare metal SoCs. "
+      ++ "Can write an operating system from " ++ scratch ++ "."
   ] where scratch = "\\href{https://youtu.be/vbZU7ABrAiE} {scratch}"
 
 rust :: Resume
@@ -180,9 +198,9 @@ mobileDev = paragraph
 skills :: Resume
 skills = section "技能" "Skills" . pure $ itemize
   [ programmingLanguages
-  , database
   , rust
   , system
+  , database
   , noSimple mobileDev
   , devTools
   ]
@@ -210,6 +228,7 @@ resume = paragraph
   , tex "name" "吳昱緯" "Yu Wei Wu"
 
   , basicInfo
+  , brief
   , education
 
   , section "工作經歷" "Work Experience"
@@ -223,6 +242,7 @@ resume = paragraph
     , noSimple smolpotat
     , noSimple book
     , noSimple rcc4r
+    , noSimple honga
     ]
 
   , skills
