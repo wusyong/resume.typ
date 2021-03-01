@@ -172,8 +172,8 @@ system = paragraph
 
   , cn "TODO"
   , en $ "familiar with Linux programming interface and also other Unix-like OSes. "
-      ++ "Understand several concurrency patterns even on bare metal SoCs. "
-      ++ "Can write an operating system from " ++ scratch ++ "."
+      ++ "Understand profiling tools like perf and how to generate the flame graph."
+      ++ "Could write an operating system from " ++ scratch ++ "."
   ] where scratch = "\\href{https://youtu.be/vbZU7ABrAiE} {scratch}"
 
 rust :: Resume
@@ -261,6 +261,11 @@ resume = paragraph
     , cn "\\item 開源貢獻："
     , en "\\item Member of \\textsf{Tauri, Webview, rust-tw} and more,"
     , en $ "contributed to " ++ projects ++ " and other projects"
+
+    , cn "\\item TODO:"
+    , en "\\item Get one-page version of the resume here: https://tinyurl.com/5bu836cy"
+    , en "\\item Get complete version of the resume here: https://tinyurl.com/ffw74czc"
+    
     ] ]
 
   -- end document

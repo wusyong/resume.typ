@@ -8,5 +8,5 @@ To build this resume, install texlive-full and GHC toolchain first. And then exe
 
 # Download
 
-- [English simplified version (pdf)](https://raw.githubusercontent.com/wusyong/resume/master/resume.pdf)
+- [English one-page version (pdf)](https://raw.githubusercontent.com/wusyong/resume/master/resume.pdf)
 - [English complete version (pdf)](https://raw.githubusercontent.com/wusyong/resume/master/resume-elab.pdf)
