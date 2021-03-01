@@ -16,7 +16,7 @@ basicInfo = paragraph
 brief :: Resume
 brief = section "TODO" "Brief"
   [ paragraph
-    [ en $ "A software developer interested in system programing, exploring from operating systems to embedded systems. "
+    [ en $ "A software developer interested in system programming, exploring from operating systems to embedded systems. "
         ++ "Specifically, the design and implementation of concurrency patterns, for data, threads, and more. "
         ++ "Proficient in Rust and C, but comfortible with most general programming languages."
     , cn "TODO"
@@ -74,7 +74,7 @@ iota = paragraph
     , en "\\item Designed the framework that can be the one source of truth and provides better interoperability through WASM and FFI."
 
     , cn "\\item TODO"
-    , elab "\\item Mentored and guided other developers in the team become more familiar with Rust programing."
+    , elab "\\item Mentored and guided other developers in the team become more familiar with Rust programming."
 
     , cn "\\item TODO"
     , elab "\\item Learned a lot about distributed system, working remotely, and databases."
@@ -172,7 +172,7 @@ system = paragraph
 
   , cn "TODO"
   , en $ "familiar with Linux programming interface and also other Unix-like OSes. "
-      ++ "Understand profiling tools like perf and how to generate the flame graph."
+      ++ "Understand profiling tools like perf and how to generate the flame graph. "
       ++ "Could write an operating system from " ++ scratch ++ "."
   ] where scratch = "\\href{https://youtu.be/vbZU7ABrAiE} {scratch}"
 
@@ -263,8 +263,8 @@ resume = paragraph
     , en $ "contributed to " ++ projects ++ " and other projects"
 
     , cn "\\item TODO:"
-    , en "\\item Get one-page version of the resume here: https://tinyurl.com/5bu836cy"
-    , en "\\item Get complete version of the resume here: https://tinyurl.com/ffw74czc"
+    , en $ "\\item Get one-page version of the resume here: " ++ url "https://tinyurl.com/5bu836cy"
+    , en $ "\\item Get complete version of the resume here: " ++ url "https://tinyurl.com/ffw74czc"
     
     ] ]
 
