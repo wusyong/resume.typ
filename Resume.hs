@@ -16,8 +16,8 @@ basicInfo = paragraph
 brief :: Resume
 brief = section "TODO" "Brief"
   [ paragraph
-    [ en $ "A software developer interested in system programming, exploring from operating systems to embedded systems. "
-        ++ "Specifically, the design and implementation of concurrency patterns, for data, threads, and more. "
+    [ en $ "A software developer interested in system programming, love to explore different architecture platforms, especially RISC-V. "
+        -- ++ "Specifically, the design and implementation of concurrency patterns, for data, threads, and more. "
         ++ "Proficient in Rust and C, but comfortible with most general programming languages."
     , cn "TODO"
     ]
@@ -45,13 +45,13 @@ biilabs = paragraph
     ]
   , itemize
     [ cn "\\item TODO"
-    , en "\\item Improved computation bottleneck significantly with various technics like SIMD  and embedded FPGA."
+    , en "\\item Improved computation bottleneck significantly with various approach like SSE/AVX SIMD acceleration and building embedded FPGA cluster with rabbitMQ."
 
     , cn "\\item TODO"
-    , en "\\item Developed microservices to accelerate accessing distributed system. "
+    , en "\\item Developed microservices to accelerate accessing distributed system. Deployed and Monitored them with tools like Ansible and Grafana."
 
     , cn "\\item TODO"
-    , elab "\\item Maintained both cloud instances and local servers. Learned a lot about Linux programming and its codebase."
+    , elab "\\item Built the CI/CD environments with Buildkite. Maintained both cloud instances and local servers with Nginx and HAProxy. Learned a lot about Linux programming and its codebase."
     ]
   ]
 
@@ -68,13 +68,11 @@ iota = paragraph
   , itemize
     [ cn "\\item TODO"
     , en $ "\\item Developed the protocol of main system service. "
-          ++ "Built several essential components around the distributed system like async actor runtime, message queue, and database ORM."
+          ++ "Built several essential components around the distributed system like async actor-based runtime, MPMC channel, "
+          ++ "and a fully hand-made protocol implementation to communicate with Cassandra / ScyllaDB."
 
     , cn "\\item TODO"
-    , en "\\item Designed the framework that can be the one source of truth and provides better interoperability through WASM and FFI."
-
-    , cn "\\item TODO"
-    , elab "\\item Mentored and guided other developers in the team become more familiar with Rust programming."
+    , elab "\\item Mentored and guided other developers in the team become more familiar with various new tools and languages."
 
     , cn "\\item TODO"
     , elab "\\item Learned a lot about distributed system, working remotely, and databases."
@@ -110,7 +108,7 @@ wry :: Resume
 wry = paragraph
   [ github "tauri-apps/wry" `datedSection` bold "Wry"
   , cn "TODO"
-  , en "Cross-platfrom WebView rendering library in Rust that supports all major desktop platforms like Windows, macOS, and Linux."
+  , en "Cross-platfrom WebView rendering library that supports all major desktop platforms like Windows, macOS, and Linux."
   ]
 
 book :: Resume
@@ -157,7 +155,7 @@ programmingLanguages = paragraph
 
 database :: Resume
 database = paragraph
-  [ itemTeX "編譯器" "Database"
+  [ itemTeX "TODO" "Database"
   , cn "TODO"
   , en $ "familiar with various databases such as " ++ dbs ++ ", etc."
   , elab "Understand concepts between different SQL/NoSQL databases."
@@ -172,9 +170,16 @@ system = paragraph
 
   , cn "TODO"
   , en $ "familiar with Linux programming interface and also other Unix-like OSes. "
-      ++ "Understand profiling tools like perf and how to generate the flame graph. "
-      ++ "Could write an operating system from " ++ scratch ++ "."
+      ++ "Understand general architecutre of the operating system and know how to write one from " ++ scratch ++ "."
   ] where scratch = "\\href{https://youtu.be/vbZU7ABrAiE} {scratch}"
+
+profiling :: Resume
+profiling = paragraph
+  [ itemTeX "TODO" "Profiling"
+  , cn "TODO"
+  , en $ "familiar with various tools such as " ++ dbs ++ ", and many kinds of sanitizers."
+  , elab "Understand benchmarking, tuning, and producing useful graphic representations with gnuplot."
+  ] where dbs = "perf, Flame Graph, Valgrind"
 
 rust :: Resume
 rust = paragraph
@@ -200,8 +205,9 @@ skills = section "技能" "Skills" . pure $ itemize
   [ programmingLanguages
   , rust
   , system
+  , profiling
   , database
-  , noSimple mobileDev
+  -- , noSimple mobileDev
   , devTools
   ]
 
@@ -237,12 +243,12 @@ resume = paragraph
     ]
 
   , section "個人專案" "Personal Projects"
-    [ tauri
+    [ noSimple honga
+    , tauri
     , wry
     , noSimple smolpotat
     , noSimple book
-    , noSimple rcc4r
-    , noSimple honga
+    -- , noSimple rcc4r
     ]
 
   , skills
@@ -253,7 +259,7 @@ resume = paragraph
                   ++ "smol, amethyst}"
     in itemize
     [ cn "\\item TODO"
-    , en $ "\\item Crates.io profile: " ++ url crates ++ ", for publishing interesting Rust libraries"
+    -- , en $ "\\item Crates.io profile: " ++ url crates ++ ", for publishing interesting Rust libraries"
 
     , en "\\item Languages: English - fluent, Chinese - native, Taiwanese - native"
     , cn "\\item TODO"
