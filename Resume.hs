@@ -16,7 +16,7 @@ basicInfo = paragraph
 brief :: Resume
 brief = section "TODO" "Brief"
   [ paragraph
-    [ en $ "A software developer interested in system programming, love to explore different architecture platforms, especially RISC-V. "
+    [ en $ "A software developer interested in system programming. Core memeber of Tauri cross-platform framework. "
         -- ++ "Specifically, the design and implementation of concurrency patterns, for data, threads, and more. "
         ++ "Proficient in Rust and C, but comfortible with most general programming languages."
     , cn "TODO"
@@ -48,7 +48,7 @@ biilabs = paragraph
     , en "\\item Improved computation bottleneck significantly with various approach like SSE/AVX SIMD acceleration and building embedded FPGA cluster with rabbitMQ."
 
     , cn "\\item TODO"
-    , en "\\item Developed microservices to accelerate accessing distributed system. Deployed and Monitored them with tools like Ansible and Grafana."
+    , elab "\\item Developed microservices to accelerate accessing distributed system. Deployed and Monitored them with tools like Ansible and Grafana."
 
     , cn "\\item TODO"
     , elab "\\item Built the CI/CD environments with Buildkite. Maintained both cloud instances and local servers with Nginx and HAProxy. Learned a lot about Linux programming and its codebase."
@@ -58,8 +58,8 @@ biilabs = paragraph
 iota :: Resume
 iota = paragraph
   [ datedSection (date "2019" "08" ~~ date "2020" "12") $ paragraph
-    [ cn "\\textbf{IOTA 基金會}, 德國柏林"
-    , en "\\textbf{IOTA Foundation}, German Berlin"
+    [ cn "\\textbf{爵福科技有限公司}, 台灣"
+    , en "\\textbf{Chuehfu Technology Ltd.}, Taiwan"
     ]
   , paragraph
     [ cn "\\role{分散式儲存系統}{資深軟體工程師 - Protocol 團隊}"
@@ -79,11 +79,28 @@ iota = paragraph
     ]
   ]
 
-smolpotat :: Resume
-smolpotat = paragraph
-  [ github "wusyong/smol-potat" `datedSection` bold "Smol-potat"
-  , cn "TODO"
-  , en "Proc macro for smol async runtime. It provides an ergonomic way to fine tune the runtime system."
+semnet :: Resume
+semnet = paragraph
+  [ datedSection (date "2021" "01" ~~ present) $ paragraph
+    [ cn "\\textbf{Semnet Ltd.}, 愛爾蘭"
+    , en "\\textbf{Semnet Ltd.}, Ireland"
+    ]
+  , paragraph
+    [ cn "\\role{TODO}{TODO}"
+    , en "\\role{System Programming}{Individual Contributor}"
+    ]
+  , itemize
+    [ cn "\\item TODO"
+    , en $ "\\item Focus on building foundation of all services across multiple platforms. "
+          ++ "Resolved all platform-specific issues while bringing each systems' capability for the team to build features on top of them. "
+          ++ "Researched toward possible goals and designed best solutions for the company to promote the products."
+
+    , cn "\\item TODO"
+    , elab "\\item Built the core compoment that work for all platforms and hence reduce complexity when developing them."
+
+    , cn "\\item TODO"
+    , elab "\\item Built native application solutions that reduce multiple overhead significantly."
+    ]
   ]
 
 tauri :: Resume
@@ -98,9 +115,6 @@ tauri = paragraph
 
     , cn "\\item TODO"
     , en "\\item Supports cross-platform compilation to bundle binaries for major desktop platforms."
-
-    , cn "\\item TODO"
-    , en "\\item Tauri application can have extreme small binary size and memory usage."
     ]
   ]
 
@@ -108,7 +122,14 @@ wry :: Resume
 wry = paragraph
   [ github "tauri-apps/wry" `datedSection` bold "Wry"
   , cn "TODO"
-  , en "Cross-platfrom WebView rendering library that supports all major desktop platforms like Windows, macOS, and Linux."
+  , en "Cross-platfrom WebView library that supports all desktop platforms like Windows, macOS, and Linux."
+  ]
+
+tao :: Resume
+tao = paragraph
+  [ github "tauri-apps/tao" `datedSection` bold "Tao"
+  , cn "TODO"
+  , en "Cross-platfrom Windows management library that supports all desktop and mobile platforms like Windows, macOS, Linux, Android, and iOS."
   ]
 
 book :: Resume
@@ -116,20 +137,6 @@ book = paragraph
   [ github "rust-tw/book-tw" `datedSection` bold "TRPL (Traditional Chinese Version)"
   , cn "TODO"
   , en "Traditional Chinese version of The Rust Programming Language, the official book on Rust."
-  ]
-
-rcc4r :: Resume
-rcc4r = paragraph
-  [ github "wusyong/RCC4r" `datedSection` bold "RCC4r"
-  , cn "TODO"
-  , en "A Rust impl. of toy C Compiler with only 4 Raw functions."
-  ]
-
-honga :: Resume
-honga = paragraph
-  [ github "wusyong/honga" `datedSection` bold "Honga"
-  , cn "TODO"
-  , en "A 64-bit RISC-V emulator that can run Unix-like OSes like xv6."
   ]
 
 devTools :: Resume
@@ -165,12 +172,16 @@ database = paragraph
 system :: Resume
 system = paragraph
   [ itemTeX "系統開發" "System Programming"
-  , cn "\\textbf{3 年}經驗，"
-  , en "\\textbf{3 years} of experience,"
+  , cn "\\textbf{4 年}經驗，"
+  , en "\\textbf{4 years} of experience,"
 
   , cn "TODO"
   , en $ "familiar with Linux programming interface and also other Unix-like OSes. "
-      ++ "Understand general architecutre of the operating system and know how to write one from " ++ scratch ++ "."
+      ++ "Understand general architecture of the operating system and know how to write one from " ++ scratch ++ "."
+
+  , cn "TODO"
+  , elab $ "Also familiar with interfaces of all mainstream OSes from desktop to mobile, and able to develop on top of them"
+      ++ "without the help of any framework."
   ] where scratch = "\\href{https://youtu.be/vbZU7ABrAiE} {scratch}"
 
 profiling :: Resume
@@ -184,21 +195,12 @@ profiling = paragraph
 rust :: Resume
 rust = paragraph
   [ pure "\\item \\textbf{Rust}:"
-  , cn "\\textbf{4 年}經驗，"
-  , en "\\textbf{4 years} of experience,"
-  , elab $ "have projects collected in " ++ arust ++ ","
+  , cn "\\textbf{5 年}經驗，"
+  , en "\\textbf{5 years} of experience,"
+  , elab $ "have projects collected in " ++ arust ++ " with over 40k stars in total,"
   , en "familiar with Cargo and Bazel, understand procedural macros, Rust asynchronous runtimes, and unsafe usage,"
   , en "contributed to Rust compiler and its tools from time to time."
   ] where arust = "\\href{https://github.com/rust-unofficial/awesome-rust} {Awesome Rust}"
-
-mobileDev :: Resume
-mobileDev = paragraph
-  [ itemTeX "行動應用開發" "Mobile Development"
-  , cn "\\textbf{1 年}經驗，"
-  , en "\\textbf{1 year} of experience,"
-  , pure "iOS (Swift), Fuchsia (Flutter)"
-  , cn "。"
-  ]
 
 skills :: Resume
 skills = section "技能" "Skills" . pure $ itemize
@@ -207,7 +209,6 @@ skills = section "技能" "Skills" . pure $ itemize
   , system
   , profiling
   , database
-  -- , noSimple mobileDev
   , devTools
   ]
 
@@ -240,15 +241,14 @@ resume = paragraph
   , section "工作經歷" "Work Experience"
     [ biilabs
     , iota
+    , semnet
     ]
 
   , section "個人專案" "Personal Projects"
-    [ noSimple honga
-    , tauri
+    [ tauri
     , wry
-    , noSimple smolpotat
+    , tao
     , noSimple book
-    -- , noSimple rcc4r
     ]
 
   , skills

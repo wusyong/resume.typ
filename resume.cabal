@@ -9,6 +9,6 @@ extra-source-files:  README.md
 executable resume-gen
   main-is:          Main.hs
   other-modules:    TeX, Resume
-  build-depends:    base >=4.13 && <4.14, mtl >=2.0
+  build-depends:    base >=4.14 && <4.15, mtl >=2.0
   hs-source-dirs:   .
   default-language: Haskell2010
