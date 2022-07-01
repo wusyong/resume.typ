@@ -18,7 +18,7 @@ brief = section "TODO" "Brief"
   [ paragraph
     [ en $ "A software developer interested in system programming. Core memeber of Tauri cross-platform framework. "
         -- ++ "Specifically, the design and implementation of concurrency patterns, for data, threads, and more. "
-        ++ "Proficient in Rust and C, but comfortible with most general programming languages."
+        ++ "Proficient in Rust and C, but comfortable with most general programming languages."
     , cn "TODO"
     ]
   ]
