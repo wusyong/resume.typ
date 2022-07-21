@@ -239,9 +239,9 @@ resume = paragraph
   , education
 
   , section "工作經歷" "Work Experience"
-    [ biilabs
+    [ semnet
     , iota
-    , semnet
+    , biilabs
     ]
 
   , section "個人專案" "Personal Projects"
