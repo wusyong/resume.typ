@@ -152,7 +152,7 @@ devTools = paragraph
 
 programmingLanguages :: Resume
 programmingLanguages = paragraph
-  [ itemTeX "程式設計語言" "Program Language"
+  [ itemTeX "程式設計語言" "Programming Language"
   , en "\\textbf{multilingual} (not limited to any specific language),"
   , en $ "especially experienced in " ++ very ++ ","
   , en $ "comfortable with " ++ somehow ++ " (in random order)."
